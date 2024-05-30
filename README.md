@@ -82,3 +82,40 @@ uvicorn app.main:app --reload
 ## Utilisation de l'API
 Pour utiliser l'API, accédez à la documentation interactive de Swagger à l'adresse suivante :
 
+```bash
+http://127.0.0.1:8000/docs
+```
+
+## Exécution des Tests
+1. Définissez le chemin du projet :
+
+```bash
+set PYTHONPATH=%CD%  # Sous Windows
+export PYTHONPATH=$(pwd)  # Sous macOS/Linux
+```
+2. Lancez pytest :
+```bash
+pytest
+```
+## Docker
+Vous pouvez également utiliser Docker pour exécuter l'application :
+
+Construisez et lancez les conteneurs :
+
+```bash
+docker-compose up --build
+```
+
+Pour accéder à l'API
+
+```arduino
+http://127.0.0.1:8000/docs
+```
+
+
+## Documentation
+Une documentation détaillée du projet est également disponible dans le fichier documentation.pdf inclus dans le projet.
+
+
+
+
