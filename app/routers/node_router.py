@@ -1,7 +1,7 @@
 # app/routers/node_router.py
-from fastapi import APIRouter, HTTPException, Depends, Query, status
-from bson import ObjectId
+from fastapi import APIRouter, Depends, HTTPException, status, Query
 from typing import List
+from bson import ObjectId
 from ..models import Node, NodeResponse
 from ..db import get_database
 from ..crud import create_node, read_nodes, read_node, update_node, delete_node, add_link, remove_link, search_nodes
@@ -37,9 +37,6 @@ async def add_link_route(node_id: str, target_node_id: str, db=Depends(get_datab
 async def remove_link_route(node_id: str, target_node_id: str, db=Depends(get_database)):
     return await remove_link(node_id, target_node_id, db)
 
-@node_router.get("/search/", response_model=List[NodeResponse])
-async def search_nodes_route(query: str = Query(None, min_length=3), db=Depends(get_database)):
-    return await search_nodes(query, db)
 
 @node_router.get("/cycles/", response_model=List[str])
 async def detect_cycles_route(db=Depends(get_database)):
