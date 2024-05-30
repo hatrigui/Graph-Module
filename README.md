@@ -6,6 +6,9 @@ Ce projet est une API FastAPI avec MongoDB pour la gestion des noeuds.
 - **`app/__init__.py`** : Fichier d'initialisation pour le module `app`.
 - **`app/main.py`** : Point d'entrée de l'application FastAPI, où l'application est définie et les routeurs sont inclus.
 - **`app/db.py`** : Fichier de configuration pour la connexion à MongoDB, gestion du cycle de vie de la base de données, et création des index nécessaires.
+- **`app/graph_algorithms.py`** : Fichier contenant les algorithmes de détection de cycles et de recherche du plus court chemin.
+- **`app/crud.py`** : Fichier contenant les opérations CRUD pour les noeuds.
+- **`app/models.py`** : Fichier contenant les modèles de données utilisés par l'application.
 - **`app/routers/node_router.py`** : Fichier contenant les endpoints de l'API pour la gestion des noeuds.
 - **`tests/test_main.py`** : Fichier de tests pour vérifier le bon fonctionnement de l'application.
 - **`.env`** : Fichier optionnel pour définir les variables d'environnement.
