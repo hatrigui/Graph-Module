@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  fastapi-app:
+    build:
+      context: .
+    container_name: fastapi-app
+    ports:
+      - "8080:8000"  
+    depends_on:
+      - mongodb
+
+volumes:
+  mongo_data:
