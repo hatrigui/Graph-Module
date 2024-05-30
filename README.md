@@ -1,27 +1,6 @@
 # Graph-Module
 Ce projet est une API FastAPI avec MongoDB pour la gestion des noeuds.
 
-## Hiérarchie du Projet
-test-technique/
-│
-├── app/
-│ ├── init.py # Fichier d'initialisation du module
-│ ├── main.py # Point d'entrée de l'application FastAPI
-│ ├── db.py # Configuration de la base de données et gestion du cycle de vie
-│ └── routers/
-│ └── node_router.py # Routeur pour les endpoints de l'API de gestion des noeuds
-│
-├── tests/
-│ └── test_main.py # Fichier de tests pour l'application FastAPI
-│
-├── .env # Fichier d'environnement pour les variables (optionnel)
-├── .dockerignore # Fichier pour ignorer certains fichiers dans Docker
-├── .gitignore # Fichier pour ignorer certains fichiers dans Git
-├── Dockerfile # Fichier de configuration pour Docker
-├── docker-compose.yml # Fichier de configuration pour Docker Compose
-├── requirements.txt # Fichier listant les dépendances Python du projet
-└── README.md # Fichier d'instructions pour le projet
-
 ### Description des Fichiers
 
 - **`app/__init__.py`** : Fichier d'initialisation pour le module `app`.
